@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kolumbus", "Kolumbus\Kolumbus.csproj", "{C780F1BB-7EEE-471A-8FAD-689AB84E1DCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCards", "DeckOfCards\DeckOfCards.csproj", "{7FDFDB9B-3FB2-4567-92ED-DDFBB1F6EC83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C780F1BB-7EEE-471A-8FAD-689AB84E1DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C780F1BB-7EEE-471A-8FAD-689AB84E1DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C780F1BB-7EEE-471A-8FAD-689AB84E1DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C780F1BB-7EEE-471A-8FAD-689AB84E1DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FDFDB9B-3FB2-4567-92ED-DDFBB1F6EC83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FDFDB9B-3FB2-4567-92ED-DDFBB1F6EC83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FDFDB9B-3FB2-4567-92ED-DDFBB1F6EC83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FDFDB9B-3FB2-4567-92ED-DDFBB1F6EC83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
