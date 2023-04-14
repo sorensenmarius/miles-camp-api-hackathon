@@ -1,5 +1,5 @@
-using Kolumbus2Ride.Dto;
-using Kolumbus2Ride.Services;
+using KolumbusToRide.Dto;
+using KolumbusToRide.Services;
 using KolumbusToRide.Domain;
 
 var builder = WebApplication.CreateBuilder(args);

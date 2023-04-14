@@ -1,6 +1,6 @@
 ﻿using DeckOfCards;
 using Kolumbus;
-using Kolumbus2Ride.Domain;
+using KolumbusToRide.Domain;
 
 namespace KolumbusToRide.Domain;
 

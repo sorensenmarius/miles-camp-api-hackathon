@@ -1,4 +1,4 @@
-﻿namespace Kolumbus2Ride.Dto;
+﻿namespace KolumbusToRide.Dto;
 
 public class MakeMoveDto
 {

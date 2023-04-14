@@ -2,7 +2,7 @@
 using KolumbusToRide.Domain;
 using Card = DeckOfCards.Card;
 
-namespace Kolumbus2Ride.Services;
+namespace KolumbusToRide.Services;
 
 public static class GameService
 {

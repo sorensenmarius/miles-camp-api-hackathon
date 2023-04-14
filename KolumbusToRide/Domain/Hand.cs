@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Kolumbus;
 using DeckOfCards;
 
-namespace Kolumbus2Ride.Domain
+namespace KolumbusToRide.Domain
 {
 
     public class Hand : IHand
