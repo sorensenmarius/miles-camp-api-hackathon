@@ -30,9 +30,9 @@ namespace Kolumbus
         public string arrival_status { get; set; }
         public string departure_status { get; set; }
         public object schedule_arrival_time { get; set; }
-        public DateTime schedule_departure_time { get; set; }
-        public DateTime expected_arrival_time { get; set; }
-        public DateTime expected_departure_time { get; set; }
+        public DateTime? schedule_departure_time { get; set; }
+        public DateTime? expected_arrival_time { get; set; }
+        public DateTime? expected_departure_time { get; set; }
         public object[] notices { get; set; }
         public DateTime creation_time { get; set; }
         public bool is_valid { get; set; }
