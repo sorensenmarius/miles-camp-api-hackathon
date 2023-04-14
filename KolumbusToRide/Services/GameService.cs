@@ -1,5 +1,4 @@
 ﻿using Kolumbus;
-using Kolumbus2Ride.Domain;
 using KolumbusToRide.Domain;
 using Card = DeckOfCards.Card;
 
@@ -19,7 +18,7 @@ public static class GameService
 
         return playerState;
     }
-    
+
     /**
      * card = short version of card. For example "5H" for the five of hearts
      */
@@ -28,7 +27,7 @@ public static class GameService
         // Get correct stop
         Card card = playerState.Hand.First(c => c.value == "cardValue");
         StopPlace nextStop = KolumbusService.MoveAlongLine(lineId, card.getMoves());
-        
+
         // Add time to next stop to playerState.timePlayed
 
         // TODO: Update score - check finished goal route
