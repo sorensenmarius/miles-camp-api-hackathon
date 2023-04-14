@@ -17,6 +17,7 @@ if (app.Environment.IsDevelopment())
 var playerState = new PlayerState();
 
 // ----- Endpoints -------------------------------------------------------
+app.MapPost("/start", (string name) => GameService.StartGame(playerState, name));
 app.MapGet("/get-my-boi", () => playerState);
 app.MapPost(
     "/get-on-vehicle",

@@ -5,6 +5,19 @@ namespace Kolumbus2Ride.Services;
 
 public static class GameService
 {
+    public static PlayerState StartGame(PlayerState playerState, string name)
+    {
+        playerState = new PlayerState
+        {
+            Name = name,
+            CurrentPosition = KolumbusService.GetRandomStopPlace(),
+            GoalPosition = KolumbusService.GetRandomStopPlace(),
+            TimeLeft = TimeSpan.FromHours(2)
+        };
+
+        return playerState;
+    }
+    
     public static PlayerState GetOnVehicle(PlayerState playerState, string vehicleId)
     {
         // 1. Get next stop
