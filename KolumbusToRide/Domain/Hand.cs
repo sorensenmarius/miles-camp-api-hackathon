@@ -62,7 +62,12 @@ namespace Kolumbus2Ride.Domain
 
         public void playCard(Card playedCard)
         {
-            throw new NotImplementedException();
+            Deck.cards.Remove(playedCard);
+            Console.WriteLine("Played card: " + playedCard.value);
+            if(Deck.cards.Count == 0)
+            {
+                Deck = Draw5Card();
+            }
         }
 
         public Deck GetDeck()
