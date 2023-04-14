@@ -3,3 +3,6 @@
 */obj/
 .vscode/launch.json
 .vscode/tasks.json
+/.vs/OpenAPIsCamp2023/config
+/.vs/OpenAPIsCamp2023
+/KolumbusToRide/KolumbusToRide.csproj.user
