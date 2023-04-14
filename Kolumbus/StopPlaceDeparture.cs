@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kolumbus
 {
-    internal class StopPlaceDeparture
+    public class StopPlaceDeparture
     {
         public string id { get; set; }
         public string line_number { get; set; }

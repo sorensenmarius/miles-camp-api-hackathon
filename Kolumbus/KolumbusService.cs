@@ -33,8 +33,15 @@ public static class KolumbusService
         throw new NotImplementedException();
     }
 
-    public static List<Vehicle> GetPossibleTransportations(StopPlace stop)
+    public static List<StopPlaceDeparture> GetPossibleTransportations(StopPlace stopPlace)
     {
-        throw new NotImplementedException();
-    } 
+        var client = new HttpClient();
+
+        List<StopPlaceDeparture>? stopPlacesDepartures =
+            client.GetFromJsonAsync<List<StopPlaceDeparture>>($"https://api.kolumbus.no/api/stopplaces/{stopPlace.id}/departures")
+                .Result;
+
+        return stopPlacesDepartures;
+
+    }
 }
