@@ -26,16 +26,15 @@ public static class GameService
     public static PlayerState MakeMove(PlayerState playerState, string lineId, string cardValue)
     {
         // Get correct stop
-        Card card = playerState.Hand.First(c => c.value == "cardValue");
+        Card card = playerState.Hand.First(c => c.value == cardValue);
         StopPlace nextStop = KolumbusService.MoveAlongLine(lineId, card.getMoves());
 
-        // Add time to next stop to playerState.timePlayed
-
         // TODO: Update score - check finished goal route
+
+        var timeUsed = KolumbusService.TravelTime(playerState.CurrentPosition, nextStop);
+        playerState.TimeUsed += timeUsed;
         // TODO: Check if more time left
-        // TODO: Get new possible transportations for the new stop
-
-
+        playerState.TimeLeft -= timeUsed;
         playerState.CurrentPosition = nextStop;
         playerState.PossibleTransportations = KolumbusService.GetPossibleTransportations(playerState.CurrentPosition);
 
