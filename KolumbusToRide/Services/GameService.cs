@@ -30,7 +30,7 @@ public static class GameService
     public static PlayerState MakeMove(PlayerState playerState, string lineId, string cardValue)
     {
         // Get correct stop
-        Card card = playerState.Hand.First(c => c.value == cardValue);
+        Card card = playerState.Hand.GetDeck().cards.First(c => c.value == cardValue);
         StopPlace nextStop = KolumbusService.MoveAlongLine(lineId, card.getMoves());
 
         // TODO: Update score - check finished goal route

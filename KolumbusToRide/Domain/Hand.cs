@@ -12,8 +12,10 @@ namespace Kolumbus2Ride.Domain
 
     public class Hand : IHand
     {
-        Deck Deck = null;
+
+        public Deck Deck = null;
         private DeckOfCards.NewDeckResponse currentDeck = new DeckOfCards.NewDeckResponse();
+
 
         public void DrawCard()
         {
@@ -62,10 +64,16 @@ namespace Kolumbus2Ride.Domain
         {
             throw new NotImplementedException();
         }
+
+        public Deck GetDeck()
+        {
+            return Deck;
+        }
     }
 
     public interface IHand
     {
+        public Deck GetDeck();
         public void DrawCard();
         public void playCard(Card playedCard);
     }
