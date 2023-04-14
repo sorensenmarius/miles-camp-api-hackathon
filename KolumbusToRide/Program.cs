@@ -12,5 +12,5 @@ if (app.Environment.IsDevelopment())
 
 // ----- Endpoints -------------------------------------------------------
 app.MapGet("/", () => "Hello World!");
-
+app.MapPost("/playCard", () => "");
 app.Run();
