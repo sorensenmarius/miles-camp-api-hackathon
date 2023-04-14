@@ -15,7 +15,7 @@ public static class KolumbusService
         return stopPlaces[new Random().Next(stopPlaces.Count)];
     }
 
-    public static StopPlace MoveAlongLine(string lineId, int n)
+    public static StopPlace MoveAlongLine(StopPlace current, string lineId, int n)
     {
         throw new NotImplementedException();
     }

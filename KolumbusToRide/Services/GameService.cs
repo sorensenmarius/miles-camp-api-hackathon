@@ -27,7 +27,7 @@ public static class GameService
     {
         // Get correct stop
         Card card = playerState.Hand.First(c => c.value == cardValue);
-        StopPlace nextStop = KolumbusService.MoveAlongLine(lineId, card.getMoves());
+        StopPlace nextStop = KolumbusService.MoveAlongLine(playerState.CurrentPosition, lineId, card.getMoves());
 
         // TODO: Update score - check finished goal route
 
