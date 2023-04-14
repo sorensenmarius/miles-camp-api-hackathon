@@ -15,14 +15,6 @@ public static class KolumbusService
         return stopPlaces[new Random().Next(stopPlaces.Count)];
     }
 
-    /**
-     * n = number of stops to include
-     */
-    public static TimeSpan GetTimeToNextStops(string vehicleId, int n)
-    {
-        throw new NotImplementedException();
-    }
-
     public static StopPlace MoveAlongLine(string lineId, int n)
     {
         throw new NotImplementedException();
