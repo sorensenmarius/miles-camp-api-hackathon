@@ -5,11 +5,11 @@ namespace KolumbusToRide.Domain;
 
 public class PlayerState
 {
-    private string Name { get; set; }
-    private int Score { get; set; }
-    private TimeSpan TimeUsed { get; set; }
-    private TimeSpan TimeLeft { get; set; }
-    private List<Card> Hand { get; set; }
-    private StopPlace CurrentPosition { get; set; }
-    private List<Vehicle> PossibleTransportations { get; set; }
+    public string Name { get; set; }
+    public int Score { get; set; }
+    public TimeSpan TimeUsed { get; set; }
+    public TimeSpan TimeLeft { get; set; }
+    public List<Card> Hand { get; set; }
+    //public StopPlace CurrentPosition { get; set; }
+    public List<Vehicle> PossibleTransportations { get; set; }
 }
