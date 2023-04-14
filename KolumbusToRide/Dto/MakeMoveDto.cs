@@ -2,6 +2,6 @@
 
 public class MakeMoveDto
 {
-    public string LineId { get; set; }
+    public string TripId { get; set; }
     public string CardValue { get; set; }
 }

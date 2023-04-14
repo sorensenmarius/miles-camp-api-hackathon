@@ -23,11 +23,11 @@ public static class GameService
     /**
      * card = short version of card. For example "5H" for the five of hearts
      */
-    public static PlayerState MakeMove(PlayerState playerState, string lineId, string cardValue)
+    public static PlayerState MakeMove(PlayerState playerState, string tripId, string cardValue)
     {
         // Get correct stop
         Card card = playerState.Hand.First(c => c.value == cardValue);
-        StopPlace nextStop = KolumbusService.MoveAlongLine(playerState.CurrentPosition, lineId, card.getMoves());
+        StopPlace nextStop = KolumbusService.MoveAlongLine(playerState.CurrentPosition, tripId, card.getMoves());
 
         // TODO: Update score - check finished goal route
 
