@@ -1,4 +1,5 @@
 ﻿using Kolumbus;
+using Kolumbus2Ride.Domain;
 using KolumbusToRide.Domain;
 
 namespace Kolumbus2Ride.Services;
@@ -7,13 +8,16 @@ public static class GameService
 {
     public static PlayerState StartGame(PlayerState playerState, string name)
     {
+        
         playerState = new PlayerState
         {
             Name = name,
             CurrentPosition = KolumbusService.GetRandomStopPlace(),
             GoalPosition = KolumbusService.GetRandomStopPlace(),
-            TimeLeft = TimeSpan.FromHours(2)
+            TimeLeft = TimeSpan.FromHours(2),
+            Hand = new Hand(),
         };
+        playerState.Hand.DrawCard();
 
         return playerState;
     }

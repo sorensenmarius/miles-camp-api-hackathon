@@ -1,16 +1,15 @@
-﻿namespace DeckOfCards;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-public record Card(
-    string code,
-    string image,
-    Images images,
-    string value,
-    // Enum maybe?
-    string suit
-);
-
-public record Images(
-    string svg,
-    string png
-);
-
+namespace DeckOfCards
+{
+    public class Card
+    {
+        public string code {get; set;}
+        public string image {get; set;}
+        public string value {get; set;}
+        public string suit {get; set;}
+     }
+}
