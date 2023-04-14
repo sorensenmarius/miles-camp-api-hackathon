@@ -13,5 +13,5 @@ public class PlayerState
     public IHand Hand { get; set; }
     public StopPlace CurrentPosition { get; set; }
     public StopPlace GoalPosition { get; set; }
-    public List<Vehicle> PossibleTransportations { get; set; }
+    public List<StopPlaceDeparture> PossibleTransportations { get; set; }
 }

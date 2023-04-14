@@ -1,6 +1,7 @@
 ﻿using Kolumbus;
 using Kolumbus2Ride.Domain;
 using KolumbusToRide.Domain;
+using Card = DeckOfCards.Card;
 
 namespace Kolumbus2Ride.Services;
 
@@ -17,20 +18,29 @@ public static class GameService
             TimeLeft = TimeSpan.FromHours(2),
             Hand = new Hand(),
         };
+        playerState.PossibleTransportations = KolumbusService.GetPossibleTransportations(playerState.CurrentPosition);
         playerState.Hand.DrawCard();
 
         return playerState;
     }
-    
-    public static PlayerState GetOnVehicle(PlayerState playerState, string vehicleId)
+
+    /**
+     * card = short version of card. For example "5H" for the five of hearts
+     */
+    public static PlayerState MakeMove(PlayerState playerState, string lineId, string cardValue)
     {
-        // 1. Get next stop
-        // 2. Add time to next stop to playerState.timePlayed
-        // 3. Set position to next stop
-        // 4. Use relevant cards
-        // 5. Update score - check finished goal route
-        // 6. Check if more time left
-        playerState.Name = "BRYNJ";
+        // Get correct stop
+        Card card = playerState.Hand.First(c => c.value == cardValue);
+        StopPlace nextStop = KolumbusService.MoveAlongLine(lineId, card.getMoves());
+
+        // TODO: Update score - check finished goal route
+
+        var timeUsed = KolumbusService.TravelTime(playerState.CurrentPosition, nextStop);
+        playerState.TimeUsed += timeUsed;
+        // TODO: Check if more time left
+        playerState.TimeLeft -= timeUsed;
+        playerState.CurrentPosition = nextStop;
+        playerState.PossibleTransportations = KolumbusService.GetPossibleTransportations(playerState.CurrentPosition);
 
         return playerState;
     }

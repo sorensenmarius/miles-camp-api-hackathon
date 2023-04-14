@@ -14,4 +14,26 @@ public static class KolumbusService
 
         return stopPlaces[new Random().Next(stopPlaces.Count)];
     }
+
+    public static StopPlace MoveAlongLine(string lineId, int n)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static TimeSpan TravelTime(StopPlace from, StopPlace to)
+    {
+        throw new NotImplementedException();
+    }
+
+    public static List<StopPlaceDeparture> GetPossibleTransportations(StopPlace stopPlace)
+    {
+        var client = new HttpClient();
+
+        List<StopPlaceDeparture>? stopPlacesDepartures =
+            client.GetFromJsonAsync<List<StopPlaceDeparture>>($"https://api.kolumbus.no/api/stopplaces/{stopPlace.id}/departures")
+                .Result;
+
+        return stopPlacesDepartures;
+
+    }
 }
