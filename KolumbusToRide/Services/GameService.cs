@@ -13,9 +13,11 @@ public static class GameService
             Name = name,
             CurrentPosition = KolumbusService.GetRandomStopPlace(),
             GoalPosition = KolumbusService.GetRandomStopPlace(),
-            TimeLeft = TimeSpan.FromHours(2)
+            TimeLeft = TimeSpan.FromHours(2),
+            Hand = new Hand(),
         };
         playerState.PossibleTransportations = KolumbusService.GetPossibleTransportations(playerState.CurrentPosition);
+        playerState.Hand.DrawCard();
 
         return playerState;
     }
@@ -26,7 +28,8 @@ public static class GameService
     public static PlayerState MakeMove(PlayerState playerState, string tripId, string cardValue)
     {
         // Get correct stop
-        Card card = playerState.Hand.First(c => c.value == cardValue);
+        Card card = playerState.Hand.GetDeck().cards.First(c => c.value == cardValue);
+        playerState.Hand.playCard(card);
         StopPlace nextStop = KolumbusService.MoveAlongLine(playerState.CurrentPosition, tripId, card.getMoves());
 
         // TODO: Update score - check finished goal route

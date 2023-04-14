@@ -1,5 +1,9 @@
-﻿namespace DeckOfCards;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
+namespace DeckOfCards;
 public record Card(
     string code,
     string image,
