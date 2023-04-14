@@ -10,6 +10,7 @@ public class PlayerState
     public TimeSpan TimeUsed { get; set; }
     public TimeSpan TimeLeft { get; set; }
     public List<Card> Hand { get; set; }
-    //public StopPlace CurrentPosition { get; set; }
+    public StopPlace CurrentPosition { get; set; }
+    public StopPlace GoalPosition { get; set; }
     public List<Vehicle> PossibleTransportations { get; set; }
 }
