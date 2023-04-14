@@ -15,6 +15,7 @@ public static class GameService
             GoalPosition = KolumbusService.GetRandomStopPlace(),
             TimeLeft = TimeSpan.FromHours(2)
         };
+        playerState.PossibleTransportations = KolumbusService.GetPossibleTransportations(playerState.CurrentPosition);
 
         return playerState;
     }
@@ -32,9 +33,11 @@ public static class GameService
 
         // TODO: Update score - check finished goal route
         // TODO: Check if more time left
+        // TODO: Get new possible transportations for the new stop
 
 
         playerState.CurrentPosition = nextStop;
+        playerState.PossibleTransportations = KolumbusService.GetPossibleTransportations(playerState.CurrentPosition);
 
         return playerState;
     }

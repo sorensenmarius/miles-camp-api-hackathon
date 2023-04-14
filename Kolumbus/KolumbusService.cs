@@ -32,4 +32,9 @@ public static class KolumbusService
     {
         throw new NotImplementedException();
     }
+
+    public static List<Vehicle> GetPossibleTransportations(StopPlace stop)
+    {
+        throw new NotImplementedException();
+    } 
 }
