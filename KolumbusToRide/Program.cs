@@ -19,10 +19,6 @@ var playerState = new PlayerState();
 // ----- Endpoints -------------------------------------------------------
 app.MapPost("/start", (string name) => GameService.StartGame(playerState, name));
 app.MapGet("/get-my-boi", () => playerState);
-app.MapPost(
-    "/get-on-vehicle",
-    (GetOnVehicleDto dto) => GameService.GetOnVehicle(playerState, dto.VehicleId)
-);
-app.MapPost("/playCard", () => "");
+app.MapPost("/make-move", (MakeMoveDto dto) => GameService.MakeMove(playerState, dto.LineId, dto.CardValue));
 
 app.Run();
