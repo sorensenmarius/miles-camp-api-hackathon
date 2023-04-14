@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kolumbus", "Kolumbus\Kolumb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeckOfCards", "DeckOfCards\DeckOfCards.csproj", "{7FDFDB9B-3FB2-4567-92ED-DDFBB1F6EC83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kolumbus2Ride", "Kolumbus2Ride\Kolumbus2Ride.csproj", "{22FF20ED-3F8C-4394-91F4-547636B29B6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KolumbusToRide", "KolumbusToRide\KolumbusToRide.csproj", "{22FF20ED-3F8C-4394-91F4-547636B29B6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
